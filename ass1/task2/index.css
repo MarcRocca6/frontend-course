@@ -1,0 +1,72 @@
+/* 
+Author:         Marc Rocca
+Course:         COMP6080 Assignment 1
+Description:    CSS for Task 2
+*/
+
+body {
+    margin: auto 0;
+    align-items: left;
+}
+
+#board {
+    display: flex;
+    flex-direction: row;
+    width: 807px; 
+    height: 807px;
+}
+
+.dot_parent {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    height: 122px;
+    width: 122px;
+    border-radius: 50%;
+  }
+
+.square {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.border {
+    border: 6px solid black;
+    border-right: 0;
+    border-top: 0;
+}
+
+.top_border {
+    border: 6px solid black;
+    border-right: 0;
+}
+
+.right_border {
+    border: 6px solid black;
+    border-top: 0;
+}
+
+.top_right_border {
+    border: 6px solid black;
+}
+
+.right {
+    border-right: 6px;
+}
+
+.yellow  {
+    background: rgb(200, 195, 101);
+}
+
+.green {
+    background: rgb(119, 162, 109);
+}
+
+.red {
+    background: rgb(146, 81, 61);
+}

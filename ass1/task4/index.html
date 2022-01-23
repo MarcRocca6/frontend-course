@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 4</title>
+        <script type="text/javascript">
+            /**
+             * Removes all element forms to their inital state
+             */
+            function remove() {
+                document.getElementById("first_name").value = '';
+                document.getElementById("last_name").value = '';
+                document.getElementById("date").value = '';
+                for (let i = 0; i < 4; i++) {
+                    document.getElementById("city"+(i+1)).checked = false;
+                }
+                document.getElementById("cheese").value = "Haloumi";
+                document.getElementById("message").value = '';
+            }
+
+            /**
+             * Cleans and sets text to textarea element
+             * @param {String} text
+             */
+            function newText(text) {
+                document.getElementById("message").value = text;
+            }
+
+            /**
+             * Adds text to the textarea element
+             * @param {String} text
+             */
+            function addText(text) {
+                document.getElementById("message").value += text;
+            }
+
+            /**
+             * Checks to see if a valid name was entered in the name field
+             * @param {String} name_type: either 'first' or 'second'
+             */
+            function check_name(name_type) {
+                var id = name_type.concat('_name');
+                var name_text = document.getElementById(id).value;
+                var patt = /^[A-Za-z]{3,50}$/i;
+                var result = name_text.match(patt);
+                if (result == null) {
+                    var error = 'Do not enter an invalid ';
+                    //newText(error.concat(name_type, 'name'));
+                    document.getElementById(id).value = '';
+                }
+                check_form()
+            }
+
+            /**
+             * Checks to see if a valid date was entered in the date field
+             */
+            function check_date() {
+                var date_text = document.getElementById("date").value;
+                var patt = /[0-9]{2}\/[0-9]{2}\/[0-9]{4}/i;
+                var result = date_text.match(patt);
+                if (result === null) {
+                    //newText("Do not enter an invalid date of birth");
+                    document.getElementById("date").value = '';
+                }
+                check_form()
+            }
+
+            /**
+             * Checks to see if the form has been filled out and prints
+             * either an error or a result message
+             */
+            function check_form() {
+                try {
+                    var date_text = document.getElementById("date").value;
+                    var firstname_text = document.getElementById("first_name").value;
+                    var lastname_text = document.getElementById("last_name").value;
+                    if (! (date_text === '' || firstname_text === '' || 
+                        lastname_text === '')) {
+                        var cheese = get_cheese();
+                        var age = get_age(date_text);
+                        var cities = get_cities();
+                        output = `Hello ${firstname_text} ${lastname_text}, 
+                                you are ${age} years old, 
+                                your favourite cheese is ${cheese} 
+                                and you've lived in ${cities}.`;
+                        output = dontIndent(output);
+                        newText(output);
+                    } else {
+                        if ((firstname_text === '')) {
+                            newText("Do not enter an invalid firstname.");
+                        } else if ((lastname_text === '')) {
+                            newText("Do not enter an invalid lastname.");
+                        } else if ((date_text === '')) {
+                            newText("Do not enter an invalid date of birth");
+                        }
+                    }
+                }
+                catch(err) {
+                    addText("\n" + err.message);
+                }
+            }
+
+            /**
+             * Calculate the age from the user form
+             * @param {String} date_string: Date of a string
+             */
+            function get_age(date_string) {
+                var s = date_string;
+                var [d,m,yr] = [s.slice(0,2),s.slice(3,5),s.slice(6,10)];
+                var d2 = new Date(yr, m, d);
+                var ageDate = new Date(Date.now()-d2);
+                var age = Math.abs(ageDate.getUTCFullYear() - 1970);   
+                return age;
+            }
+
+            /**
+             * Return the 'cheese' value from the dropdown menu
+             */
+            function get_cheese() {
+                var cheese = document.getElementById("cheese").value;
+                return cheese;
+            }
+
+            /**
+             * Return the 'cities' value from the city checkbox
+             */
+            function get_cities() {
+                let text = "";
+                const cities = ["Adelaide", "Perth", "Hobart", "Darwin"];
+                for (let i = 0; i < cities.length; i++) {
+                    var checked = document.getElementById("city"+(i+1)).checked;
+                    if (checked) {
+                        if (text === "") text = cities[i];
+                        else text += ", " + cities[i];
+                    }
+                }
+                if (text === "") text = "no cities";
+                return text;
+            }
+
+            /**
+             * Removes indents from a string
+             */
+            function dontIndent(str){
+                return ('' + str).replace(/\n\s+/g, '');
+            }
+        </script>
+    </head>
+    <body onload="load()">
+        <div id="myform">
+            <table border="1">
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" id="first_name" onblur="Javascript:check_name('first')"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" id="last_name" onblur="Javascript:check_name('last')">
+                </tr>
+                <tr>
+                    <td>Date of birth</td>
+                    <td><input type="text" id="date" onblur="Javascript:check_date()">
+                </tr>
+                <tr>
+                    <td>Favourite cheese</td>
+                    <td>
+                        <select id="cheese" name="cheese" onchange="Javascript:check_form()">
+                            <option value="Haloumi">Haloumi</option>
+                            <option value="Brie">Brie</option>
+                        </select>
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Cities lived in</td>
+                    <td>
+                        <input type="checkbox" id="city1" name="city1" value="Adelaide" onchange="Javascript:check_form()">
+                        <label for="city1"> Adelaide</label><br>
+                        <input type="checkbox" id="city2" name="city2" value="Perth" onchange="Javascript:check_form()">
+                        <label for="city2"> Perth</label><br>
+                        <input type="checkbox" id="city3" name="city3" value="Hobart" onchange="Javascript:check_form()">
+                        <label for="city3"> Hobart</label><br>
+                        <input type="checkbox" id="city4" name="city4" value="Darwin" onchange="Javascript:check_form()">
+                        <label for="city4"> Darwin</label><br>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="button" id="remove" value="Remove" onclick="Javascript:remove()"></td>
+        </div>
+        <br>
+        <div id="mydata">
+            <textarea id="message" name="message" rows="10" cols="30"></textarea>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,231 @@
+/* 
+Author:         Marc Rocca
+Course:         COMP6080 Assignment 1
+Description:    CSS for Smallscreen views of the page
+*/
+
+/* Main Heading Style */
+
+/* #outer_container {
+    width: 453px;
+    height: 1873px;
+} */
+
+#second_inner_container {
+    padding: 0px 20px 0px 20px;
+}
+
+h1 {
+    font-size: 2em;
+    padding:  0px 20px 0px 20px;
+}
+
+.h2_container {
+    padding-top: 1px;
+}
+
+h2 {
+    font-size: 1em;
+    padding:  0px 20px 0px 20px;
+}
+
+h3 {
+    font-size: 0.8em;
+    padding: 0px 20px 0px 20px;
+}
+
+h4 {
+    font-size: 1em;
+    padding: 0px 20px 0px 20px;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+
+h5 {
+    padding: 0px 20px 0px 20px;
+    color: rgb(200, 200, 200, 0.75);
+    font-size: 0.8em;
+    line-height: 125%;
+    font-weight: 300;
+}
+
+hr {
+    border-width: 0;
+    border-top-width: 1px;
+    background-color: rgba(200, 200, 200, 0.377);
+    height: 0;
+}
+
+ul {
+    line-height: 250%;
+}
+
+/* Button */
+
+#learn_button {
+    display: inline-flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding: 8px 32px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    background-color: #00000000;
+}
+
+#learn_button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Banner Style */
+
+#light_banner {
+    flex: 1;
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 0px;
+    background-color: rgb(37, 37, 37);
+}
+
+#banner_text {
+    display: flex;
+    font-size: 1.1em;
+    align-items: center;
+    padding-left: 0;
+    padding-top: 0;
+    font-style: italic;
+    justify-content: left; 
+}
+
+.top {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.bottom {
+    display: flex;
+    padding-bottom: 10px;
+    flex: 1;
+    align-items: center;
+    justify-content: left; 
+}
+
+#learn_button {
+    font-style: bold;
+    font-size: 0.75em;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.left {
+    flex: 3;
+    justify-content: left; 
+}
+
+.right {
+    display: flex;
+    justify-content: right; 
+    vertical-align: middle;
+}
+
+img {
+    display: block;
+    float: right;
+    height: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 15px;
+}
+
+#sign_button {
+    font-size: 0.8em;
+    font-style: bold;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:rgb(39, 176, 105);
+}
+
+#sign_button:hover {
+    background-color:rgba(39, 176, 105, 0.5);
+    color:rgba(255, 255, 255, 0.5);
+}
+
+/* Table */
+
+#table_heading {
+    padding-left: 0px;
+    font-size: 1.9em;
+}
+
+table {
+    /* display: flex; */
+    table-layout:fixed;
+    line-height: 14px;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    color: rgb(200, 200, 200, 0.75);
+}
+
+tr {
+    flex: 1; 
+    border-bottom: 1px solid rgb(50, 50, 50);
+    text-align: center;
+    vertical-align:middle; 
+}
+
+th {
+    text-align: center;  
+    padding: 20px 0px;   
+}
+
+td {
+    font-size: 0.9em;
+    word-wrap: break-word;
+    min-width: 150px;
+    text-align: center;    
+    padding: 20px 0px;   
+}
+
+td.row_heading {
+    overflow: auto;
+    width: 40px;
+    text-align: left;    
+    font-size: 1em;
+    padding-top: 18px;;
+    padding-bottom: 12px;
+}
+
+.highlighted {
+    background: rgb(37, 37, 37);
+    border: 1px solid rgb(37, 37, 37);
+    color: rgb(205, 205, 205);
+    font-size: 1.1em;
+    font-style: bold;
+    text-align: center; 
+}
+
+#cell_heading {
+    line-height: 20px;
+    text-align: left;  
+    padding-left: 0;
+}
+
+#cell_heading > h2 {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 1.3em;
+}
+
+#Pricing {
+    font-size: 0.9em;
+}

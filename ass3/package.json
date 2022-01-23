@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@material-ui/icons": "^4.11.2",
+    "react-button": "^1.2.1"
+  },
+  "devDependencies": {
+    "enzyme-adapter-react-16": "^1.15.6",
+    "react-test-renderer": "^17.0.2"
+  }
+}

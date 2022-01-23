@@ -1,0 +1,269 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewListings renders succestfully and the same each time 1`] = `
+Array [
+  <div
+    className="Register card text-black"
+  >
+    <h1
+      className="text-center padding-bottom-xl"
+    >
+      Listings Create
+    </h1>
+    <div
+      className="card-body p-md-3"
+    >
+      <form
+        className=""
+        onSubmit={[Function]}
+      >
+        <div
+          className="mb-3"
+        >
+          <label
+            className="form-label"
+          >
+            Title
+          </label>
+          <input
+            autoFocus={true}
+            className="form-control"
+            onChange={[Function]}
+            placeholder=""
+            type="name"
+            value=""
+          />
+        </div>
+        <div
+          className="mb-3"
+        >
+          <label
+            className="form-label"
+          >
+            Property Type
+          </label>
+          <select
+            autoFocus={true}
+            className="form-select"
+            onChange={[Function]}
+            value="House"
+          >
+            <option>
+              House
+            </option>
+            <option>
+              Villa
+            </option>
+            <option>
+              Town House
+            </option>
+            <option>
+              Pent House
+            </option>
+            <option>
+              Tent
+            </option>
+            <option>
+              Mansion
+            </option>
+            <option>
+              Appartment
+            </option>
+            <option>
+              Granny Flat
+            </option>
+          </select>
+        </div>
+        <div
+          className="mb-3"
+        >
+          <label
+            className="form-label"
+          >
+            Hosting Address
+          </label>
+          <input
+            autoFocus={true}
+            className="form-control"
+            onChange={[Function]}
+            placeholder=""
+            type="name"
+            value=""
+          />
+        </div>
+        <div
+          className="mb-3"
+        >
+          <label
+            className="form-label"
+          >
+            Price
+          </label>
+          <input
+            autoFocus={true}
+            className="form-control"
+            onChange={[Function]}
+            placeholder="350"
+            type="number"
+            value={0}
+          />
+        </div>
+        <div
+          className="mb-3 row"
+        >
+          <div
+            className="col"
+          >
+            <label
+              className="form-label"
+              htmlFor="formGridCity"
+            >
+              Beds
+            </label>
+            <input
+              autoFocus={true}
+              className="form-control"
+              id="formGridCity"
+              onChange={[Function]}
+              placeholder="1"
+              type="number"
+              value={1}
+            />
+          </div>
+          <div
+            className="col"
+          >
+            <label
+              className="form-label"
+              htmlFor="formGridState"
+            >
+              Bedrooms
+            </label>
+            <input
+              autoFocus={true}
+              className="form-control"
+              id="formGridState"
+              onChange={[Function]}
+              placeholder="1"
+              type="number"
+              value={1}
+            />
+          </div>
+          <div
+            className="col"
+          >
+            <label
+              className="form-label"
+              htmlFor="formGridZip"
+            >
+              Bathrooms
+            </label>
+            <input
+              autoFocus={true}
+              className="form-control"
+              id="formGridZip"
+              onChange={[Function]}
+              placeholder="1"
+              type="number"
+              value={1}
+            />
+          </div>
+        </div>
+        <div
+          className="mb-3"
+        >
+          <label
+            className="form-label"
+          >
+            Amenities
+          </label>
+          <select
+            className="form-select"
+            multiple={true}
+            onChange={[Function]}
+            value={Array []}
+          >
+            <option
+              value="TV"
+            >
+              TV
+            </option>
+            <option
+              value="Wifi"
+            >
+              Wifi
+            </option>
+            <option
+              value="Pool"
+            >
+              Pool
+            </option>
+            <option
+              value="Patio"
+            >
+              Patio
+            </option>
+            <option
+              value="Parking"
+            >
+              Parking
+            </option>
+            <option
+              value="Hot Tub"
+            >
+              Hot Tub
+            </option>
+            <option
+              value="Fire pit"
+            >
+              Fire pit
+            </option>
+            <option
+              value="BBQ grill"
+            >
+              BBQ grill
+            </option>
+            <option
+              value="Pool Table"
+            >
+              Pool Table
+            </option>
+            <option
+              value="Indoor Fireplace"
+            >
+              Indoor Fireplace
+            </option>
+            <option
+              value="Outdoor Dining Area"
+            >
+              Outdoor Dining Area
+            </option>
+          </select>
+        </div>
+        <div
+          className="mb-3"
+        >
+          <label
+            className="form-label"
+          >
+            Thumbnail
+          </label>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            type="file"
+          />
+        </div>
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          type="submit"
+        >
+          Create New Listing
+        </button>
+      </form>
+    </div>
+  </div>,
+  <br />,
+]
+`;

@@ -1,0 +1,147 @@
+/* 
+Author:         Marc Rocca
+Course:         COMP6080 Assignment 1
+Description:    CSS for Task 1
+*/
+
+/* NOTE: This HTML works with a screen dimension of 1398x665 */
+
+body {
+    margin: auto;
+    padding:0;
+    display: inline-flex;
+    border: 1px solid black;
+    flex-direction: column;
+    width: 1398px;
+    height: 665px;
+}
+
+/* Style to fill the 1398x665 screen dimension */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/* ---------------------------------------- */
+
+#top_box {
+    padding-top: 25px;
+    display: flex;
+    flex: 3;
+    flex-direction: row;
+    background: rgb(204, 204, 204);
+}
+
+#bottom_box {
+    padding-top: 25px;
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+    background: rgb(255, 255, 255);
+}
+
+#top_left_box {
+    flex: 2;
+    align-items: center;
+}
+
+#top_right_box {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+#bottom_left_box {
+    flex: 2;
+    align-items: center;
+}
+
+#bottom_right_box {
+    flex: 1;
+}
+
+h1 {
+    font-family: 'Bahnschrift Condensed';
+    font-weight: 800;
+    padding: 0% 10%;
+    font-size: 2.7em;
+    line-height: 1.5;
+    color:rgb(125, 106, 85);
+    margin-bottom: -5px;
+}
+
+#header2 {
+    margin-top: 18px;
+    font-size: 2.4em;
+}
+
+p {
+    padding-top: 4-px;
+    font-size: 1.08em;
+    padding: 0 10%;
+    font-family: 'Bookman Old Style';
+    font-weight: 200;
+    color:rgb(125, 106, 85);
+    line-height: 1.9;
+}
+
+img {
+    position: relative;
+    width: 325px;
+    padding: 18px;
+    padding-top: 25px;
+    padding-bottom: 40px;
+    margin-top: -20px;
+    left: -60px;
+    top: -40px;
+    background-color: white;
+}
+
+.left {
+    text-align: left;
+}
+
+ul {
+    margin-left:100px;
+    list-style: none;
+    margin-bottom: -5px;
+}
+
+#text2 {
+    font-size: 1.02em;
+}
+
+#break {
+    display: block;
+    line-height: 0px;
+ }
+
+li span{
+    font-family: 'Bookman Old Style';
+    font-weight: 200;
+    padding: 0 10%;
+    color:rgb(125, 106, 85);
+    font-size: 1em;
+    position: relative;
+    padding-left: 5px;
+    left:-1px;
+    line-height: 2em;
+  }
+
+ul li {
+    list-style-type: none;
+}
+
+ul li::before {
+    content: "\2022";
+    color:rgb(125, 106, 85);
+    font-size: 1.2em;
+    font-weight: 200;
+    display: inline-block; 
+    width: 0.7em;
+    margin-left: -1em;
+}
+
